@@ -3,6 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Farell Alvaro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 24px;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        #board {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-gap: 2px;
+            margin: 20px auto;
+        }
+        .cell {
+            width: 100px;
+            height: 100px;
+            background-color: #ddd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 36px;
+            cursor: pointer;
+        }
+        .cell:hover {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hi, welcome, I'm Farell Alvaro</h1>
+    </header>
+    <div class="container">
+        <h2>My Portfolio</h2>
+        <p>Welcome to my portfolio! Below you can find some of my recent works and projects.</p>
+        <h3>Recent Projects:</h3>
+        <ul>
+            <li>Project 1: Making Flutter app, integrated with firebase (cloudfirestore)</li>
+            <li>Project 2: Making an OOP based app in C# using Winform. The app is called "To Do list App"</li>
+            <li>Project 3: Making a simple calculator app with GUI</li>
+            <!-- Add more projects as needed -->
+        </ul>
+        <h3>Play Tic-Tac-Toe!</h3>
+        <div id="board">
+            <div class="cell" onclick="move(0)"></div>
+            <div class="cell" onclick="move(1)"></div>
+            <div class="cell" onclick="move(2)"></div>
+            <div class="cell" onclick="move(3)"></div>
+            <div class="cell" onclick="move(4)"></div>
+            <div class="cell" onclick="move(5)"></div>
+            <div class="cell" onclick="move(6)"></div>
+            <div class="cell" onclick="move(7)"></div>
+            <div class="cell" onclick="move(8)"></div>
+        </div>
+    </div>
+
+    <script>
+        let currentPlayer = 'X';
+        let cells = document.querySelectorAll('.cell');
+        let gameOver = false;
+
+        function move(cellIndex) {
+            if (!gameOver && !cells[cellIndex].innerHTML) {
+                cells[cellIndex].innerHTML = currentPlayer;
+                if (checkWinner(currentPlayer)) {
+                    gameOver = true;
+                    setTimeout(() => {
+                        alert(currentPlayer + " wins!");
+                        resetBoard();
+                    }, 100);
+                    return;
+                }
+                if (checkDraw()) {
+                    gameOver = true;
+                    setTimeout(() => {
+                        alert("It's a draw!");
+                        resetBoard();
+                    }, 100);
+                    return;
+                }
+                currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+            }
+        }
+
+        function checkWinner(player) {
+            const winningCombinations = [
+                [0, 1, 2],
+                [3, 4, 5],
+                [6, 7, 8],
+                [0, 3, 6],
+                [1, 4, 7],
+                [2, 5, 8],
+                [0, 4, 8],
+                [2, 4, 6]
+            ];
+            return winningCombinations.some(combination => {
+                return combination.every(index => cells[index].innerHTML === player);
+            });
+        }
+
+        function checkDraw() {
+            return [...cells].every(cell => cell.innerHTML !== '');
+        }
+
+        function resetBoard() {
+            cells.forEach(cell => {
+                cell.innerHTML = '';
+            });
+            currentPlayer = 'X';
+            gameOver = false;
+        }
+    </script>
+</body>
+</html>
+ coba lihat index html ini
+ChatGPT said:
+ChatGPT
+Kode HTML yang Anda bagikan adalah sebuah halaman portofolio sederhana yang juga menyertakan permainan Tic-Tac-Toe. Berikut adalah penjelasan mengenai bagian-bagian utama dari kode ini:
+
+1. Bagian <head>:
+<meta charset="UTF-8">: Menentukan set karakter yang digunakan pada halaman, yaitu UTF-8.
+<meta name="viewport" content="width=device-width, initial-scale=1.0">: Memastikan halaman dioptimalkan untuk ditampilkan pada berbagai perangkat dengan lebar yang sesuai.
+<title>: Menetapkan judul dari halaman yang akan ditampilkan pada tab browser.
+<style>: Bagian ini mengandung CSS yang digunakan untuk mendesain tampilan halaman.
+2. Bagian <body>:
+<header>: Menampilkan judul utama halaman. Bagian ini memiliki latar belakang berwarna gelap (#333) dengan teks berwarna putih.
+<div class="container">: Wadah utama untuk konten portofolio, termasuk proyek-proyek terbaru dan permainan Tic-Tac-Toe.
+<h2> dan <h3>: Menampilkan subjudul dan daftar proyek.
+<p>: Menyediakan paragraf teks untuk mendeskripsikan konten halaman.
+<ul>: Digunakan untuk menampilkan daftar proyek yang telah diselesaikan.
+<div id="board">: Wadah untuk papan Tic-Tac-Toe. Papan ini terdiri dari 9 sel yang diatur menggunakan CSS Grid.
+3. Bagian Tic-Tac-Toe (JavaScript):
+Variabel dan Fungsi:
+let currentPlayer = 'X';: Menetapkan pemain saat ini (X atau O).
+let cells = document.querySelectorAll('.cell');: Mengambil semua elemen sel dalam papan Tic-Tac-Toe.
+let gameOver = false;: Menandai apakah permainan sudah selesai.
+function move(cellIndex): Mengatur logika ketika pemain melakukan gerakan. Jika tidak ada pemenang atau permainan tidak berakhir seri, pemain berganti giliran.
+function checkWinner(player): Mengecek apakah ada kombinasi pemenang yang terbentuk oleh pemain saat ini.
+function checkDraw(): Mengecek apakah semua sel sudah terisi tanpa ada pemenang, yang berarti permainan berakhir seri.
+function resetBoard(): Mengatur ulang papan setelah permainan berakhir.
+Kesimpulan:
+Portofolio: Halaman ini memuat bagian untuk memperkenalkan diri dan menampilkan proyek-proyek terbaru.
+Tic-Tac-Toe: Menyediakan interaksi permainan sederhana di dalam halaman yang memungkinkan pengguna untuk bermain Tic-Tac-Toe secara langsung.
+Secara keseluruhan, kode HTML ini sudah berfungsi dengan baik untuk membuat portofolio pribadi dengan tambahan interaktif berupa permainan Tic-Tac-Toe. Jika ada yang ingin dioptimalkan atau ditambahkan, Anda bisa menyesuaikan gaya CSS, memperbaiki logika permainan, atau menambahkan fitur lain seperti animasi atau lebih banyak proyek.
+
+You said:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FarellAlva - Github.io</title>
     <style>
         body {
@@ -72,7 +245,7 @@
             for (let i = 0; i < 9; i++) {
                 const box = document.createElement('div');
                 box.classList.add('box');
-                box.setAttribute('id', `box${i + 1}`);
+                box.setAttribute('id', box${i + 1});
                 box.addEventListener('click', handleMove);
                 game.appendChild(box);
             }
@@ -102,12 +275,12 @@
 
             for (let line of lines) {
                 const [a, b, c] = line;
-                const boxA = document.getElementById(`box${a + 1}`);
-                const boxB = document.getElementById(`box${b + 1}`);
-                const boxC = document.getElementById(`box${c + 1}`);
+                const boxA = document.getElementById(box${a + 1});
+                const boxB = document.getElementById(box${b + 1});
+                const boxC = document.getElementById(box${c + 1});
 
                 if (boxA.textContent && boxA.textContent === boxB.textContent && boxA.textContent === boxC.textContent) {
-                    alert(`Player ${boxA.textContent} wins!`);
+                    alert(Player ${boxA.textContent} wins!);
                     game.style.pointerEvents = 'none';
                     return;
                 }
