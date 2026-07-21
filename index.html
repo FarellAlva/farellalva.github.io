@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kofi Senja — Kedai Kopi Lokal Bandung</title>
+  <meta name="description" content="Kofi Senja adalah kedai kopi lokal di Bandung dengan racikan biji kopi terbaik dalam suasana hangat dan nyaman. Singgah, duduk lama, dan nikmati hari." />
+  <meta name="keywords" content="kofi senja, kedai kopi bandung, kopi lokal, espresso, manual brew, braga bandung" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header id="navbar" class="navbar">
+    <div class="container navbar-inner">
+      <a href="#" class="brand" id="brand-logo">
+        <svg class="brand-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 11h12a2 2 0 0 1 2 2v1a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4v-1a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M18 13h1a2 2 0 0 1 0 4h-1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M8 11V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M12 11V7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M6 20h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <span>Kofi Senja</span>
+        <span class="brand-slash">/&gt;</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-links" id="nav-desktop">
+        <a href="#menu" class="nav-link" id="nav-menu">Menu</a>
+        <a href="#lokasi" class="nav-link" id="nav-lokasi">Lokasi</a>
+        <a href="#reservasi" class="nav-link" id="nav-reservasi">Reservasi</a>
+        <a href="#reservasi" class="btn btn-primary-dark" id="nav-cta">Pesan Meja</a>
+      </nav>
+
+      <!-- Mobile Hamburger -->
+      <button class="hamburger" id="hamburger-btn" aria-label="Toggle Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#menu" class="mobile-nav-link" id="mob-menu">Menu</a>
+      <a href="#lokasi" class="mobile-nav-link" id="mob-lokasi">Lokasi</a>
+      <a href="#reservasi" class="mobile-nav-link" id="mob-reservasi">Reservasi</a>
+      <a href="#reservasi" class="btn btn-primary-dark mobile-cta" id="mob-cta">Pesan Meja</a>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-img-bg"></div>
+    <div class="container hero-content">
+      <div class="hero-badge">KEDAI KOPI LOKAL</div>
+      <h1 class="hero-title">Tempat senja bertemu secangkir kopi</h1>
+      <p class="hero-desc">Racikan biji kopi lokal terbaik dalam ruang yang hangat dan nyaman. Singgah, duduk lama, dan nikmati hari.</p>
+      <div class="hero-actions">
+        <a href="#menu" class="btn btn-amber" id="hero-btn-menu">Lihat Menu &nbsp;→</a>
+        <a href="#reservasi" class="btn btn-outline-light" id="hero-btn-reservasi">Reservasi Meja</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MENU ===== -->
+  <section id="menu" class="section section-cream">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">KATALOG MENU</span>
+        <h2 class="section-title">Yang kami sajikan</h2>
+        <p class="section-desc">Dari espresso pekat hingga seduhan manual yang bersih, ditemani camilan hangat.</p>
+      </div>
+
+      <!-- Espresso Based -->
+      <div class="menu-block" id="menu-espresso">
+        <div class="menu-image-col">
+          <div class="menu-img" id="img-espresso">
+            <img src="img/coffee-latte.jpg" alt="Espresso Based Coffee" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('img-fallback')" />
+          </div>
+        </div>
+        <div class="menu-list-col">
+          <h3 class="menu-category-title">Espresso Based</h3>
+          <ul class="menu-list">
+            <li class="menu-item">
+              <div class="menu-item-info">
+                <span class="menu-item-name">Espresso</span>
+                <span class="menu-item-desc">Single shot pekat, cita rasa penuh</span>
+              </div>
+              <span class="menu-item-price">Rp 22.000</span>
+            </li>
+            <li class="menu-item">
+              <div class="menu-item-info">
+                <span class="menu-item-name">Cappuccino</span>
+                <span class="menu-item-desc">Espresso dengan foam susu lembut</span>
+              </div>
+              <span class="menu-item-price">Rp 30.000</span>
+            </li>
+            <li class="menu-item">
+              <div class="menu-item-info">
+                <span class="menu-item-name">Caffe Latte</span>
+                <span class="menu-item-desc">Susu steamed dengan latte art</span>
+              </div>
+              <span class="menu-item-price">Rp 32.000</span>
+            </li>
+            <li class="menu-item">
+              <div class="menu-item-info">
+                <span class="menu-item-name">Kofi Senja Signature</span>
+                <span class="menu-item-desc">Palm sugar latte khas kami</span>
+              </div>
+              <span class="menu-item-price">Rp 35.000</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Manual Brew -->
+      <div class="menu-block menu-block-reverse" id="menu-manual">
+        <div class="menu-list-col">
+          <h3 class="menu-category-title">Manual Brew</h3>
+          <ul class="menu-list">
+            <li class="menu-item">
+              <div class="menu-item-info">
+                <span class="menu-item-name">V60 Single Origin</span>
+                <span class="menu-item-desc">Gayo / Toraja, terang &amp; bersih</span>
+              </div>
+              <span class="menu-item-price">Rp 33.000</span>
+            </li>
+            <li class="menu-item">
+              <div class="menu-item-info">
+                <span class="menu-item-name">Japanese Iced Coffee</span>
+                <span class="menu-item-desc">Diseduh langsung di atas es</span>
+              </div>
+              <span class="menu-item-price">Rp 35.000</span>
+            </li>
+            <li class="menu-item">
+              <div class="menu-item-info">
+                <span class="menu-item-name">French Press</span>
+                <span class="menu-item-desc">Body tebal, aroma kuat</span>
+              </div>
+              <span class="menu-item-price">Rp 30.000</span>
+            </li>
+          </ul>
+        </div>
+        <div class="menu-image-col">
+          <div class="menu-img" id="img-manual">
+            <img src="img/manual-brew.jpg" alt="Manual Brew Coffee" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('img-fallback')" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Camilan -->
+      <div class="menu-block" id="menu-camilan">
+        <div class="menu-image-col">
+          <div class="menu-img" id="img-camilan">
+            <img src="img/snacks.jpg" alt="Camilan" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('img-fallback')" />
+          </div>
+        </div>
+        <div class="menu-list-col">
+          <h3 class="menu-category-title">Camilan</h3>
+          <ul class="menu-list">
+            <li class="menu-item">
+              <div class="menu-item-info">
+                <span class="menu-item-name">Butter Croissant</span>
+                <span class="menu-item-desc">Renyah, dipanggang tiap pagi</span>
+              </div>
+              <span class="menu-item-price">Rp 25.000</span>
+            </li>
+            <li class="menu-item">
+              <div class="menu-item-info">
+                <span class="menu-item-name">Pisang Goreng Madu</span>
+                <span class="menu-item-desc">Klasik lokal favorit</span>
+              </div>
+              <span class="menu-item-price">Rp 20.000</span>
+            </li>
+            <li class="menu-item">
+              <div class="menu-item-info">
+                <span class="menu-item-name">Cookies Cokelat</span>
+                <span class="menu-item-desc">Chewy dengan cokelat leleh</span>
+              </div>
+              <span class="menu-item-price">Rp 18.000</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== LOKASI ===== -->
+  <section id="lokasi" class="section section-cream">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">KUNJUNGI KAMI</span>
+        <h2 class="section-title">Lokasi &amp; Jam Buka</h2>
+      </div>
+      <div class="lokasi-grid">
+        <div class="lokasi-info">
+          <div class="lokasi-item">
+            <div class="lokasi-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="lokasi-label">Alamat</h4>
+              <p class="lokasi-value">Jl. Braga No. 45, Bandung, Jawa Barat 40111</p>
+            </div>
+          </div>
+          <div class="lokasi-item">
+            <div class="lokasi-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.83a16 16 0 0 0 6.09 6.09l.88-.88a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="lokasi-label">Telepon</h4>
+              <p class="lokasi-value">+62 812 3456 7890</p>
+            </div>
+          </div>
+          <div class="lokasi-item">
+            <div class="lokasi-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
+                <polyline points="12 6 12 12 16 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="lokasi-label">Jam Operasional</h4>
+              <div class="jam-list">
+                <div class="jam-row">
+                  <span class="jam-day">Senin - Jumat</span>
+                  <span class="jam-time">07.00 - 22.00</span>
+                </div>
+                <div class="jam-row">
+                  <span class="jam-day">Sabtu</span>
+                  <span class="jam-time">08.00 - 23.00</span>
+                </div>
+                <div class="jam-row">
+                  <span class="jam-day">Minggu</span>
+                  <span class="jam-time">08.00 - 21.00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lokasi-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.3!2d107.6044!3d-6.9210!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e6e4c0a4a1a5%3A0x7c4d4a4c4b4e4f4c!2sJl.%20Braga%2C%20Bandung!5e0!3m2!1sid!2sid!4v1621000000000!5m2!1sid!2sid"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Lokasi Kofi Senja"
+            id="map-embed"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RESERVASI ===== -->
+  <section id="reservasi" class="section section-cream">
+    <div class="container">
+      <div class="reservasi-grid">
+        <div class="reservasi-image">
+          <div class="reservasi-img-wrap">
+            <img src="img/coffeeshop-exterior.jpg" alt="Kofi Senja Exterior" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('img-fallback-ext')" />
+          </div>
+        </div>
+        <div class="reservasi-form-col">
+          <span class="section-label">RESERVASI</span>
+          <h2 class="section-title">Pesan meja Anda</h2>
+          <p class="section-desc">Isi formulir singkat berikut dan kami akan menyiapkan tempat terbaik untuk Anda.</p>
+
+          <form id="reservasi-form" class="reservasi-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="field-nama">Nama</label>
+                <input type="text" id="field-nama" name="nama" class="form-input" placeholder="Nama lengkap" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="field-telepon">No. Telepon</label>
+                <input type="tel" id="field-telepon" name="telepon" class="form-input" placeholder="08xxxxxxxxxx" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="field-tanggal">Tanggal</label>
+                <input type="date" id="field-tanggal" name="tanggal" class="form-input" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="field-jam">Jam</label>
+                <input type="time" id="field-jam" name="jam" class="form-input" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="field-tamu">Jumlah Tamu</label>
+              <input type="number" id="field-tamu" name="tamu" class="form-input" value="2" min="1" max="20" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="field-catatan">Catatan (opsional)</label>
+              <textarea id="field-catatan" name="catatan" class="form-input form-textarea" placeholder="Permintaan khusus..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary-dark btn-submit" id="submit-reservasi">
+              Kirim Reservasi &nbsp;→
+            </button>
+          </form>
+
+          <!-- Toast -->
+          <div class="toast" id="toast" role="alert" aria-live="polite"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" id="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="brand brand-white" id="footer-brand">
+          <svg class="brand-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 11h12a2 2 0 0 1 2 2v1a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4v-1a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M18 13h1a2 2 0 0 1 0 4h-1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M8 11V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M12 11V7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M6 20h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          <span>Kofi Senja</span>
+        </a>
+        <p class="footer-tagline">Kedai kopi lokal dengan suasana hangat. Nikmati kopi terbaik di setiap senja.</p>
+      </div>
+
+      <div class="footer-col">
+        <h5 class="footer-heading">Jelajahi</h5>
+        <ul class="footer-links">
+          <li><a href="#menu" id="footer-nav-menu">Menu</a></li>
+          <li><a href="#lokasi" id="footer-nav-lokasi">Lokasi</a></li>
+          <li><a href="#reservasi" id="footer-nav-reservasi">Reservasi</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5 class="footer-heading">Kontak</h5>
+        <ul class="footer-links">
+          <li>Jl. Braga No. 45, Bandung</li>
+          <li>+62 812 3456 7890</li>
+          <li>
+            <span class="footer-ig">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="14" height="14">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="1.5"/>
+                <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/>
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+              </svg>
+              @kofisenja
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Kofi Senja. Seluruh hak cipta dilindungi.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
